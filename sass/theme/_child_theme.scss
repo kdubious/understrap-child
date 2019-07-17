@@ -1,0 +1,401 @@
+body {
+  padding-top: 5rem;
+  font-family: "Raleway";
+}
+
+h2 {
+  color: $gray-500;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 12px 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $gray-800;
+  font-weight: 800;
+  letter-spacing: 3.5px;
+  margin: 12px;
+  text-transform: uppercase;
+}
+
+.bg-light {
+  background-color: $white !important;
+}
+
+nav.navbar {
+  box-shadow: 0 5px 10px 0 rgba(50,50,50,0.06);
+}
+
+.navbar-nav {
+  li.nav-item {
+    color: #333;
+    font-family: "Raleway";
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    a.nav-link {
+      padding: 17px;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+  }
+}
+
+.hero {
+  color: #fff;
+  background-image: url("https://www.musicapristina.com/wp-content/uploads/2019/07/jazz-saxaphone.png");
+  background-position: right top;
+  background-size: cover;
+  @media only screen and (min-width: 993px) {
+    height: 40vw;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    height: 50vw;
+  }
+  @media only screen and (max-width: 768px) {
+    background-image: url("https://www.musicapristina.com/wp-content/uploads/2019/07/jazz-saxaphone.png");
+    background-position: right top;
+    background-size: cover;
+    height: 70vw;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 3.2vw;
+    text-transform: none;
+  }
+
+  p {
+    margin: 22px 0 38px;
+    font-size: 1.2rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+section {
+  margin-top: 70px;
+}
+
+footer {
+  color: $gray-400;
+  background-color: $black;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+
+  a {
+    color: $gray-600;
+  }
+
+  h5 {
+    color: $white;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  ul.menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li.menu-item {
+      position: relative;
+      display: block;
+      padding-top: .75rem;
+      margin-bottom: -1px;
+
+      a {
+        color: $gray-600;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  .footer-widgets {
+    padding: 72px 0;
+  }
+
+  .footer-connect {
+    background-color: $gray-800;
+    padding: 72px 0;
+
+  }
+
+  .site-info {
+    background-color: $gray-700;
+    font-size: .85rem;
+    padding: 12px;
+    position: relative;
+  }
+
+  .btt {
+    a {
+      border-radius: 0 20px 0 0;
+      color: #999999;
+      background: #222222;
+      display: block;
+      font-size: 30px;
+      height: 50px;
+      line-height: 50px;
+      margin: auto;
+      position: absolute;
+      right: 60px;
+      top: -25px;
+      -webkit-transition: all .2s linear 0s;
+      transition: all .2s linear 0s;
+      width: 50px;
+      z-index: 99;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+
+      &:hover {
+        color: $orange;
+      }
+
+      i {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .hero .container {
+    padding: 0 12px;
+  }
+
+  .hero {
+    h2 {
+      font-size: 4vw;
+    }
+  }
+}
+
+[data-rellax-container],
+[data-rellax] {
+  width: 100%;
+  height: 100%;
+}
+
+[data-rellax] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+[data-rellax-container] {
+  overflow: hidden;
+}
+
+[data-rellax-container] [data-rellax] {
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+
+body [data-rellax-container] [data-rellax] {
+  opacity: 1;
+}
+
+.rellax-element.rellax-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header-content-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.content-wrap {
+  justify-content: flex-start;
+  align-content: center;
+  max-width: 44em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-button {
+  display: inline-block;
+  padding: .5em 1em;
+  border: 1px solid currentColor;
+  border-radius: .25em;
+  background: none;
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.c-button + .c-button {
+  margin-left: .5em;
+}
+
+.c-button--primary {
+  background: white;
+  color: black;
+}
+
+[data-rellax] {
+  transform: translate3d(0,0,0);
+  will-change: transform;
+  background-color: #444;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.js-slider img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.color-dark {
+  color: #444;
+}
+
+.rellax-hidden {
+  opacity: 0;
+}
+
+[class*="c-bully"],
+[class*="c-bully"]:after,
+[class*="c-bully"]:before {
+  box-sizing: border-box;
+}
+
+.c-bully {
+  position: fixed;
+  top: 50%;
+  right: 48px;
+  font-size: 12px;
+  transform: translate(0, -50%);
+  z-index: 9000;
+  color: #000;
+  color: #888;
+}
+
+.c-bully--inversed {
+  color: #FFF;
+  color: #888;
+}
+
+.c-bully__bullet {
+  padding: .5em;
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.c-bully__bullet:after {
+  content: "";
+
+  display: block;
+  width: 1em;
+  height: 1em;
+
+  border: 2px solid currentColor;
+  border-radius: 50%;
+
+  will-change: transform;
+}
+
+.c-bully__bullet--active {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: top .2s ease-out;
+}
+
+.c-bully__bullet--active:before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.c-bully__bullet--active:after {
+  border-color: transparent;
+}
+
+.c-bully__bullet--pop {
+  animation: bully-pop .6s cubic-bezier(0.485, 1.630, 0.430, 2) forwards, fade-in .2s .2s ease-out forwards;
+}
+
+.c-bully__bullet--squash {
+  opacity: 1;
+  animation: bully-squash .2s ease-out forwards;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bully-pop {
+  50% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bully-squash {
+  50% {
+    transform: scale(0.6, 1.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

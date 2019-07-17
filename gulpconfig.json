@@ -1,12 +1,14 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
+    "server": true,
     "notify": false
   },
   "browserSyncWatchFiles" : [
+    "./css/*.css",
     "./css/*.min.css",
     "./js/*.min.js",
-    "./**/*.php"
+    "./**/*.php",
+    "./*.html"
   ],
   "paths" : {
     "js": "./js",
