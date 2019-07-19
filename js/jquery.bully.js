@@ -116,6 +116,8 @@
             constructor: Bully,
             _reloadElement: function() {
                 this.offset = $( this.element ).offset();
+                // need to accomodate the body padding
+                this.offset.top -= 80;
                 this.height = $( this.element ).outerHeight();
             },
             onClick: function() {
