@@ -64,7 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php wp_footer(); ?>
 
 
-<?php if ( is_front_page() && is_home() ) : ?>
+<?php if ( is_front_page() ) : ?>
 <script>
     // $('[data-rellax]').rellax();
     $('[data-bully]').bully();
@@ -74,4 +74,3 @@ $container = get_theme_mod( 'understrap_container_type' );
 </body>
 
 </html>
-
