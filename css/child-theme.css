@@ -11658,6 +11658,9 @@ h3 {
     letter-spacing: 2px;
     margin: 0 0 .75rem; }
 
+h4 {
+  color: #111; }
+
 h4 a {
   color: #222; }
 
@@ -11726,6 +11729,15 @@ header.entry-header {
   border-bottom: 1px solid #e9e9e9;
   width: 100%; }
 
+blockquote {
+  border-left: 4px solid #050505;
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem; }
+  blockquote h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 0; }
+
 .entry-content {
   padding: 2.5rem 0; }
 
@@ -11738,7 +11750,7 @@ header.entry-header {
   padding-top: 2.5rem; }
 
 .news-article {
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid #e9e9e9; }
 
 .news-header h2 a {
@@ -11789,7 +11801,7 @@ footer {
       footer ul.menu li.menu-item a {
         color: #777; }
         footer ul.menu li.menu-item a:hover {
-          color: #041f30; }
+          color: #f76402; }
   footer .footer-widgets {
     padding: 72px 0; }
   footer .footer-connect {
@@ -11798,8 +11810,7 @@ footer {
   footer .footer-social .footer-widget .custom-html-widget {
     font-size: 3em; }
     footer .footer-social .footer-widget .custom-html-widget a {
-      color: #fff;
-      margin-right: 1em; }
+      color: #fff; }
       footer .footer-social .footer-widget .custom-html-widget a:hover {
         color: #f76402; }
   footer .site-info {
@@ -12054,6 +12065,9 @@ body [data-rellax-container] [data-rellax] {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
+
+#tpbr_topbar {
+  z-index: 100 !important; }
 
 /*
 * Use existing Bootstrap 4 classes and

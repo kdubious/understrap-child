@@ -36,12 +36,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 offset-md-2 col-sm-6 offset-md-0">
-					<div class="footer-subscribe">
+					<div class="footer-subscribe text-center">
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Contact Form') ) : ?><?php endif;?>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
-					<div class="footer-social">
+					<div class="footer-social text-center">
 						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Social Media') ) : ?><?php endif;?>
 					</div>
 				</div>
@@ -55,15 +55,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 						style="visibility: visible; animation-name: flash; animation-duration: 2s;"
 						data-wow-duration="2s"></i></a>
 			</div>
-			Copyright &copy; 2019 Musica Pristina
+			<p class="text-center">
+				Copyright &copy; 2010 - <?php echo date("Y");?> Musica Pristina
+			</p>
 		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>
+
+
+<?php if ( is_front_page() && is_home() ) : ?>
 <script>
     // $('[data-rellax]').rellax();
     $('[data-bully]').bully();
-</script>
+</script>	
+<?php endif; ?>
 
 </body>
 
