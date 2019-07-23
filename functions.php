@@ -25,7 +25,7 @@ function theme_enqueue_styles()
 	wp_enqueue_style('musica-pristina-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get('Version'));
 	wp_enqueue_style('musica-pristina-google-font-styles', 'https://fonts.googleapis.com/css?family=Raleway%3A400%2C600%2C700%2C800%7COpen+Sans%3A400%2C400italic&subset=latin%2Clatin-ext&display=block', array(), $the_theme->get('Version'));
 	wp_enqueue_script('jquery', 'https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js', array(), null, true);
-	wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/347627540a.js', array(), null, true);	
+	// wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/347627540a.js', array(), null, true);	
 	wp_enqueue_script('musica-pristina-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get('Version'), true);
 	wp_enqueue_script('musica-pristina-bully', get_stylesheet_directory_uri() . '/js/jquery.bully.js', array(), $the_theme->get('Version'), true);
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

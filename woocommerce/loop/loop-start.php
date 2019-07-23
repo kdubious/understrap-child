@@ -1,8 +1,8 @@
 <?php
 /**
- * Sidebar
+ * Product Loop Start
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/global/sidebar.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/loop/loop-start.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -12,13 +12,15 @@
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
-
-get_sidebar( 'shop' );
-
-/* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
+?>
+<div class="clearfix"></div>
+<div class="row">
+<!--
+<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+-->
