@@ -11700,6 +11700,16 @@ nav.navbar ul.navbar-nav li.nav-item {
   background-image: url("https://www.musicapristina.com/wp-content/uploads/sites/4/2019/07/jaz-sax.jpg");
   background-position: right top;
   background-size: cover; }
+  .hero h2 {
+    color: #fff;
+    font-size: 3.2vw;
+    text-transform: none; }
+  .hero p {
+    margin: 22px 0 38px;
+    font-size: 1.2rem; }
+    @media only screen and (max-width: 768px) {
+      .hero p {
+        font-size: 1rem; } }
   @media only screen and (min-width: 993px) {
     .hero {
       height: 40vw; } }
@@ -11711,17 +11721,17 @@ nav.navbar ul.navbar-nav li.nav-item {
       background-image: url("https://www.musicapristina.com/wp-content/uploads/sites/4/2019/07/jaz-sax.jpg");
       background-position: right top;
       background-size: cover;
-      height: 70vw; } }
-  .hero h2 {
-    color: #fff;
-    font-size: 3.2vw;
-    text-transform: none; }
-  .hero p {
-    margin: 22px 0 38px;
-    font-size: 1.2rem; }
-    @media only screen and (max-width: 768px) {
-      .hero p {
-        font-size: 1rem; } }
+      height: 70vw; }
+      .hero h2 {
+        font-size: 2rem; } }
+  @media only screen and (max-width: 576px) {
+    .hero {
+      height: 90vw; }
+      .hero .container {
+        padding: 0 12px; }
+      .hero h2 {
+        font-size: 5vw;
+        line-height: 6.5vw; } }
 
 .wrapper {
   padding: 0; }
@@ -11739,7 +11749,7 @@ header.entry-header {
 blockquote {
   background-color: #f8f9f9;
   border-left: 4px solid #f76402;
-  padding-left: 1.5rem;
+  padding: 1rem 0 1rem 1.5rem;
   margin-bottom: 2.5rem; }
   blockquote h3 {
     font-size: 1.5rem;
@@ -11788,7 +11798,7 @@ footer {
   font-size: 14px;
   font-family: "Open Sans", sans-serif; }
   footer a {
-    color: #777; }
+    color: #bbb; }
   footer h5 {
     color: #fff;
     font-size: 15px;
@@ -11812,14 +11822,18 @@ footer {
       padding-top: .75rem;
       margin-bottom: -1px; }
       footer ul.menu li.menu-item a {
-        color: #777; }
+        color: #bbb; }
         footer ul.menu li.menu-item a:hover {
           color: #f76402; }
   footer .footer-widgets {
     padding: 72px 0; }
+  footer .footer-widget {
+    margin-bottom: 3rem; }
   footer .footer-connect {
     background-color: #111;
     padding: 72px 0; }
+    footer .footer-connect h5 {
+      margin-bottom: 1.5rem; }
   footer .footer-social .footer-widget .custom-html-widget {
     font-size: 3em; }
     footer .footer-social .footer-widget .custom-html-widget a {
@@ -11831,6 +11845,9 @@ footer {
     font-size: .85rem;
     padding: 12px;
     position: relative; }
+  footer p {
+    position: relative;
+    z-index: 100; }
   footer .btt a {
     border-radius: 0 20px 0 0;
     color: #999999;
@@ -11864,12 +11881,6 @@ footer {
 
 .grecaptcha-badge {
   display: none; }
-
-@media only screen and (max-width: 576px) {
-  .hero .container {
-    padding: 0 12px; }
-  .hero h2 {
-    font-size: 4vw; } }
 
 /* Woo Commerce  */
 #woocommerce-wrapper {

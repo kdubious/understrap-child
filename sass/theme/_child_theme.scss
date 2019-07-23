@@ -112,18 +112,6 @@ nav.navbar {
   background-image: url("https://www.musicapristina.com/wp-content/uploads/sites/4/2019/07/jaz-sax.jpg");
   background-position: right top;
   background-size: cover;
-  @media only screen and (min-width: 993px) {
-    height: 40vw;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
-    height: 50vw;
-  }
-  @media only screen and (max-width: 768px) {
-    background-image: url("https://www.musicapristina.com/wp-content/uploads/sites/4/2019/07/jaz-sax.jpg");
-    background-position: right top;
-    background-size: cover;
-    height: 70vw;
-  }
 
   h2 {
     color: #fff;
@@ -138,6 +126,35 @@ nav.navbar {
       font-size: 1rem;
     }
   }
+  @media only screen and (min-width: 993px) {
+    height: 40vw;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    height: 50vw;
+  }
+  @media only screen and (max-width: 768px) {
+    background-image: url("https://www.musicapristina.com/wp-content/uploads/sites/4/2019/07/jaz-sax.jpg");
+    background-position: right top;
+    background-size: cover;
+    height: 70vw;
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    height: 90vw;
+
+    .container {
+      padding: 0 12px;
+    }
+
+    h2 {
+      font-size: 5vw;
+      line-height: 6.5vw;
+    }
+  }
+
 }
 
 .wrapper {
@@ -161,7 +178,7 @@ header {
 blockquote {
   background-color: #f8f9f9;
   border-left: 4px solid $orange;
-  padding-left: 1.5rem;
+  padding: 1rem 0 1rem 1.5rem;
   margin-bottom: 2.5rem;
 
   h3 {
@@ -228,7 +245,7 @@ footer {
   font-family: "Open Sans", sans-serif;
 
   a {
-    color: $gray-600;
+    color: $gray-400;
   }
 
   h5 {
@@ -255,7 +272,7 @@ footer {
       margin-bottom: -1px;
 
       a {
-        color: $gray-600;
+        color: $gray-400;
 
         &:hover {
           color: $orange;
@@ -268,10 +285,17 @@ footer {
     padding: 72px 0;
   }
 
+  .footer-widget {
+    margin-bottom: 3rem;
+  }
+
   .footer-connect {
     background-color: $gray-800;
     padding: 72px 0;
 
+    h5 {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .footer-social {
@@ -295,6 +319,11 @@ footer {
     font-size: .85rem;
     padding: 12px;
     position: relative;
+  }
+
+  p {
+    position: relative;
+    z-index: 100;
   }
 
   .btt {
@@ -338,17 +367,6 @@ footer {
 
 .grecaptcha-badge {
   display: none;
-}
-@media only screen and (max-width: 576px) {
-  .hero .container {
-    padding: 0 12px;
-  }
-
-  .hero {
-    h2 {
-      font-size: 4vw;
-    }
-  }
 }
 
 /* Woo Commerce  */

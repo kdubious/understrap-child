@@ -1,55 +1,52 @@
 <?php
-
 /**
- * Template Name: Right Sidebar Layout
- *
- * This template can be used to override the default template and sidebar setup
+ * The template for displaying all single posts.
  *
  * @package understrap
  */
 
 // Exit if accessed directly.
-defined('ABSPATH') || exit;
+defined( 'ABSPATH' ) || exit;
 
 get_header();
-
-the_post();
+$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="full-width-page-wrapper">
-	<header class="entry-header">
-		<div class="container">
-			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-		</div>
-	</header>
-	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
-		<div class="container">
-		</div>
-	</div>
-	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9 content-area" id="primary">
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php
-						wp_link_pages(
-							array(
-								'before' => '<div class="page-links">' . __('Pages:', 'understrap'),
-								'after'  => '</div>',
-							)
-						);
-						?>
-					</div>
-				</div>
-				<div class="col-md-3 right-area">
-					<?php dynamic_sidebar( 'right-sidebar' ); ?>
-				</div>
-			</div>
-		</div>
-	</article>
-	<footer class="entry-footer">
-		<?php edit_post_link(__('Edit', 'understrap'), '<span class="edit-link">', '</span>'); ?>
-	</footer>
-</div>
+<div class="wrapper" id="single-wrapper">
+
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+
+		<div class="row">
+
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+
+			<main class="site-main" id="main">
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+
+					<?php understrap_post_nav(); ?>
+
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</main><!-- #main -->
+
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+
+		</div><!-- .row -->
+
+	</div><!-- #content -->
+
+</div><!-- #single-wrapper -->
+
 <?php get_footer();
