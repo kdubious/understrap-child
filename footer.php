@@ -64,13 +64,52 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php wp_footer(); ?>
 
 
+<!--
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" defer onload="myInit()"></script>
+<script src="https://kit.fontawesome.com/347627540a.js" async></script>
+-->
+
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/child-theme.min.js?ver=' . wp_get_theme()->get('Version') ?>" defer></script>
+
 <?php if ( is_front_page() ) : ?>
+
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/jquery.bully.js'?>" defer onload="myInit()"></script>
 <script>
     // $('[data-rellax]').rellax();
-    $('[data-bully]').bully();
-</script>	
+	function myInit() {
+		$( document ).ready(function() {
+			$('[data-bully]').bully();
+		});
+	}
+</script>
+
+<?php else : ?>
+
+<script>
+	function myInit() {
+		
+	}
+</script>
+
 <?php endif; ?>
+
+<script>
+
+	
+	/* First CSS File */
+	/*
+	var giftofspeed = document.createElement('link');
+	giftofspeed.rel = 'stylesheet';
+	giftofspeed.href = '<?php echo get_stylesheet_directory_uri() . '/css/child-theme.min.css'?>';
+	giftofspeed.type = 'text/css';
+	var godefer = document.getElementsByTagName('link')[0];
+	godefer.parentNode.insertBefore(giftofspeed, godefer);
+	*/
+    
+</script>	
+
 
 </body>
 
 </html>
+

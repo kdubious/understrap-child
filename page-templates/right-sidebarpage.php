@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Right Sidebar Layout
+ * Template Name: Right Sidebar Layout MP2
  *
  * This template can be used to override the default template and sidebar setup
  *
@@ -43,7 +43,9 @@ the_post();
 					</div>
 				</div>
 				<div class="col-md-3 right-area">
-					<?php dynamic_sidebar( 'right-sidebar' ); ?>
+					<div class="sticky-top kew">
+						<?php dynamic_sidebar( 'right-sidebar' ); ?>
+					</div>
 				</div>
 			</div>
 		</div>

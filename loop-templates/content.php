@@ -9,7 +9,7 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('mp-post-list-item'); ?> id="post-<?php the_ID(); ?>">
 	<header class="news-header">
 		<?php
 		the_title(
