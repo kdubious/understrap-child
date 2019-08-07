@@ -13,7 +13,7 @@ $musicapristina_includes = array(
 foreach ($musicapristina_includes as $file) {
 	$filepath = locate_template('inc-mp' . $file);
 	if (!$filepath) {
-		trigger_error(sprintf('Error locating /inc%s for inclusion', $file), E_USER_ERROR);
+		trigger_error(sprintf('Error locating /inc-mp%s for inclusion', $file), E_USER_ERROR);
 	}
 	require_once $filepath;
 }

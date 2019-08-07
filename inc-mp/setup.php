@@ -88,7 +88,16 @@ function mp_news_shortcode($atts)
 };
 add_shortcode('mp-news', 'mp_news_shortcode');
 
+function mp_principals_shortcode($atts)
+{
+	// $a = shortcode_atts( array(       'name' => 'world'    ), $atts );
+	ob_start();
+	get_template_part('global-templates/principals');
+	return ob_get_clean();
+};
+add_shortcode('mp-principals', 'mp_principals_shortcode');
 
+add_filter('widget_text','do_shortcode');
 
 function understrap_posted_on()
 {

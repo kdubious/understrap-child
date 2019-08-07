@@ -8,7 +8,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-function understrap_remove_scripts()
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+function mp_understrap_remove_scripts()
 {
 	wp_dequeue_style('understrap-styles');
 	wp_deregister_style('understrap-styles');
@@ -17,12 +20,13 @@ function understrap_remove_scripts()
 	wp_deregister_script('understrap-scripts');
 
 	wp_deregister_script('jquery');
+	wp_deregister_script( 'wp-embed' );
 
 	// Removes the parent themes stylesheet and scripts from inc/enqueue.php
 }
-add_action('wp_enqueue_scripts', 'understrap_remove_scripts', 20);
+add_action('wp_enqueue_scripts', 'mp_understrap_remove_scripts', 20);
 
-function theme_enqueue_styles()
+function mp_theme_enqueue_styles()
 {
 
 	// Get the theme data
@@ -37,10 +41,10 @@ function theme_enqueue_styles()
 		wp_enqueue_script('comment-reply');
 	}
 }
-add_action('wp_enqueue_scripts', 'theme_enqueue_styles', 30);
+add_action('wp_enqueue_scripts', 'mp_theme_enqueue_styles', 30);
 
-function add_child_theme_textdomain()
+function mp_add_child_theme_textdomain()
 {
 	load_child_theme_textdomain('musica-pristina', get_stylesheet_directory() . '/languages');
 }
-add_action('after_setup_theme', 'add_child_theme_textdomain');
+add_action('after_setup_theme', 'mp_add_child_theme_textdomain');
