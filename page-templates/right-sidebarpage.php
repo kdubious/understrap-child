@@ -22,8 +22,13 @@ the_post();
 			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 		</div>
 	</header>
-	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+	<div class="breadcrumbs"> <!--  typeof="BreadcrumbList" vocab="http://schema.org/"> -->
 		<div class="container">
+		<?php if ( function_exists('yoast_breadcrumb') ) {
+			yoast_breadcrumb();
+		} else {
+			echo '-';
+		} ?>
 		</div>
 	</div>
 	<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">

@@ -67,13 +67,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!--
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" defer onload="myInit()"></script>
 <script src="https://kit.fontawesome.com/347627540a.js" async></script>
--->
+
 
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/child-theme.min.js?ver=' . wp_get_theme()->get('Version') ?>" defer></script>
 
-<?php if ( is_front_page() ) : ?>
 
+-->
+<?php if ( is_front_page() ) : ?>
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/jquery.bully.js'?>" defer onload="myInit()"></script>
+
 <script>
     // $('[data-rellax]').rellax();
 	function myInit() {
